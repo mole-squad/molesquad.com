@@ -14,6 +14,13 @@ body {
   font-weight: 300;
 }
 
-.text-white {
-  color: $white;
+html, body {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+}
+
+#app {
+  height: 100%;
+  overflow: auto;
 }

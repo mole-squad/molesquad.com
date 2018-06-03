@@ -2,6 +2,7 @@
     "defaultSeverity": "error",    
     "extends": ["tslint:latest", "tslint-react"],
     "rules": {
+        "quotemark": [true, "single", "jsx-double", "avoid-template"],
         "jsx-wrap-multiline": false
     },
     "jsRules": {},

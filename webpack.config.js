@@ -19,10 +19,24 @@ module.exports = {
       { test: /\.tsx?$/, loader: "awesome-typescript-loader" },
       { enforce: "pre", test: /\.js$/, loader: "source-map-loader" },
       {
-        test: /\.scss$/,
+        test: /\.(s)css$/,
         use: ExtractTextPlugin.extract({
           fallback: "style-loader",
-          use: "css-loader!sass-loader",
+          use: [
+            'css-loader', 
+            { 
+              loader: 'postcss-loader',
+              options: {
+                plugins: function () {
+                  return [
+                    require('precss'),
+                    require('autoprefixer')
+                  ];
+                }
+              }
+            },
+            'sass-loader'
+          ]
         })
       }
     ]
@@ -32,7 +46,7 @@ module.exports = {
       template: './src/index.html', 
       filename: './index.html' 
     }),
-    new ExtractTextPlugin('style.css')
+    new ExtractTextPlugin('style.[hash].css')
   ],
   // externals: {
   //   "react": "React",

@@ -1,5 +1,9 @@
-import * as React from "react";
+import * as React from 'react';
 
 export const App = () => {
-  return <h1>Suh Dude</h1>;
+  return (
+    <div className="d-flex justify-content-center align-items-center h-100">
+      <h1>Suh Dude</h1>
+    </div>
+  );
 };
