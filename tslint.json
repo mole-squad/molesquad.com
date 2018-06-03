@@ -1,0 +1,9 @@
+{
+    "defaultSeverity": "error",    
+    "extends": ["tslint:latest", "tslint-react"],
+    "rules": {
+        "jsx-wrap-multiline": false
+    },
+    "jsRules": {},
+    "rulesDirectory": []
+}
