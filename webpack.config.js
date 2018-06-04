@@ -7,7 +7,7 @@ const OUTPUT_PATH = path.resolve(__dirname, 'dist');
 module.exports = {
   entry: './src/index.tsx',
   output: {
-    filename: 'bundle.js',
+    filename: 'bundle.[hash].js',
     path: OUTPUT_PATH
   },
   devtool: "source-map",

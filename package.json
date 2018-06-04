@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "Mole Squad Homepage",
   "scripts": {
-    "build": "node_modules/.bin/webpack --config webpack.config.js",
+    "build": "rm -rf dist; webpack --config webpack.config.js",
+    "deploy": "node ./deploy.js",
     "dev": "webpack-dev-server --mode development --config webpack.config.js --hot --history-api-fallback",
     "lint": "tslint -c tslint.json 'src/**/*.{ts,tsx}' --fix"
   },
@@ -25,6 +26,7 @@
     "precss": "^3.1.2",
     "react": "^16.4.0",
     "react-dom": "^16.4.0",
+    "s3": "^4.4.0",
     "sass-loader": "^7.0.2",
     "source-map-loader": "^0.2.3",
     "style-loader": "^0.21.0",
@@ -34,5 +36,6 @@
     "webpack": "^4.10.2",
     "webpack-cli": "^3.0.1",
     "webpack-dev-server": "^3.1.4"
-  }
+  },
+  "devDependencies": {}
 }
