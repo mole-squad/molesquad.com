@@ -1,0 +1,23 @@
+.app-nav {
+  background: $grey;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: .75em 2em;
+  transition: top 1s ease-in-out;
+
+  &.hidden {
+    top: -($nav-height);
+  }
+
+  .nav-link {
+    color: $pale-purple;
+    text-decoration: none;
+    font-weight: 400;
+
+    &:not(:last-child) {
+      margin-right: 1.5em;
+    }
+  }
+}
